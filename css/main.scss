@@ -165,19 +165,21 @@ body > header {
 
   h1 {
     font-family: $serif;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 2.2em;
     line-height: 1.2em;
     margin-bottom: 0;
     display: inline-block;
 
-    a { color: $header-title; text-decoration: none; }
+    a { color: $header-title; text-decoration: none;
+        &:visited, &:hover, &:active { color: $header-title; }
+    }
   }
 
   h2 {
     font-family: $serif;
     margin: .2em 0 0;
-    font-size: 1em;
+    font-size: .8em;
     color: $header-sub;
     font-weight: normal;
   }
