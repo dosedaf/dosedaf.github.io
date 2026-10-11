@@ -19,6 +19,9 @@ url: "https://dosedaf.github.io"
 # Post URLs look like: /blog/2026/10/11/my-post/
 permalink: /blog/:year/:month/:day/:title/
 
+# Render all times in WIB so local preview and live match
+timezone: Asia/Jakarta
+
 # Put <!--more--> in a post to cut the homepage teaser there.
 excerpt_separator: "<!--more-->"
 
