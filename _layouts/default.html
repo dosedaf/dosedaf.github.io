@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% if site.subtitle %} - {{ site.subtitle }}{% endif %}{% endif %}</title>
+  <meta name="author" content="{{ site.author }}">
+  <meta name="description" content="{{ site.description }}">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+  {% if site.url %}<link rel="canonical" href="{{ page.url | absolute_url }}">{% endif %}
+  <link href="/favicon.png" rel="icon">
+  <link href="/css/main.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="{{ site.title }}" type="application/atom+xml">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  {% include header.html %}
+  {% include navigation.html %}
+
+  <div id="main">
+    <div id="content">
+      {{ content }}
+      {% include sidebar.html %}
+      <span class="toggle-sidebar" title="Toggle sidebar"></span>
+    </div>
+  </div>
+
+  {% include footer.html %}
+
+  <script>
+    (function () {
+      var t = document.querySelector('.toggle-sidebar');
+      if (t) t.addEventListener('click', function () {
+        document.body.classList.toggle('collapse-sidebar');
+      });
+      var m = document.querySelector('.mobile-nav select');
+      if (m) m.addEventListener('change', function () {
+        if (this.value) window.location = this.value;
+      });
+    })();
+  </script>
+</body>
+</html>

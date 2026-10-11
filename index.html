@@ -1,0 +1,25 @@
+---
+# The homepage: a blog index of recent posts.
+layout: default
+---
+<div class="blog-index">
+  {% for post in site.posts limit: site.post_limit %}
+  <article>
+    <header>
+      <h1 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+      <p class="meta"><time datetime="{{ post.date | date_to_xmlschema }}" pubdate data-updated="true">{{ post.date | date: "%b %-d, %Y" }}</time></p>
+    </header>
+    <div class="entry-content">{{ post.excerpt }}
+      {% if post.content contains "<!--more-->" %}
+      <a rel="full-article" href="{{ post.url }}">Read on &rarr;</a>
+      {% endif %}
+    </div>
+  </article>
+  {% endfor %}
+
+  <footer>
+    <div class="pagination">
+      <a href="/blog/archives">Blog Archives</a>
+    </div>
+  </footer>
+</div>

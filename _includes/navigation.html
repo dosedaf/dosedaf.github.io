@@ -1,0 +1,20 @@
+<nav role="navigation">
+  <ul class="subscription" data-subscription="rss">
+    <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  </ul>
+
+  <form action="https://www.google.com/search" method="get">
+    <fieldset role="search">
+      <input type="hidden" name="q" value="site:{{ site.url | remove: 'https://' | remove: 'http://' | remove: 'www.' }}">
+      <input class="search" type="text" name="q" results="0" placeholder="Search">
+    </fieldset>
+  </form>
+
+  <fieldset class="mobile-nav"><select><option value="">Navigate&hellip;</option><option value="/">&raquo; Blog</option><option value="/about">&raquo; About</option><option value="/blog/archives">&raquo; Archives</option></select></fieldset>
+
+  <ul class="main-navigation">
+    <li><a href="/">Blog</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/blog/archives">Archives</a></li>
+  </ul>
+</nav>

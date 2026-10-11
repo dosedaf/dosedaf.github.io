@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<article class="hentry" role="article">
+  <header>
+    <h1 class="entry-title">{{ page.title }}</h1>
+    <p class="meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" pubdate data-updated="true">{{ page.date | date: "%b %-d, %Y" }}</time>
+    </p>
+  </header>
+
+  <div class="entry-content">
+    {{ content }}
+  </div>
+
+  <footer>
+    <p class="meta">
+      <span class="byline author vcard">Posted by <span class="fn">{{ site.author }}</span></span>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+      {% if page.categories and page.categories != empty %}
+      <span class="categories">
+        {% for category in page.categories %}<span class="category">{{ category }}</span>{% unless forloop.last %}, {% endunless %}{% endfor %}
+      </span>
+      {% endif %}
+    </p>
+
+    <p class="meta">
+      {% if page.previous %}
+      <a class="basic-alignment left" href="{{ page.previous.url }}" title="Previous Post: {{ page.previous.title | escape }}">&laquo; {{ page.previous.title | truncatewords: 6 }}</a>
+      {% endif %}
+      {% if page.next %}
+      <a class="basic-alignment right" href="{{ page.next.url }}" title="Next Post: {{ page.next.title | escape }}">{{ page.next.title | truncatewords: 6 }} &raquo;</a>
+      {% endif %}
+    </p>
+  </footer>
+</article>

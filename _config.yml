@@ -1,0 +1,39 @@
+# ----------------------------------------------------------
+# Site settings — EDIT THESE FIRST
+# ----------------------------------------------------------
+title: dosedaf
+subtitle: Ayodya Enhanayoan
+author: dosedaf
+email: enhanayooan@gmail.com
+description: >-
+  A personal blog about things I'm learning.
+
+# For GitHub Pages user sites this stays empty and url is
+# https://<username>.github.io
+baseurl: ""
+url: "https://dosedaf.github.io"
+
+# ----------------------------------------------------------
+# Blog settings
+# ----------------------------------------------------------
+# Post URLs look like: /blog/2026/10/11/my-post/
+permalink: /blog/:year/:month/:day/:title/
+
+# Put <!--more--> in a post to cut the homepage teaser there.
+excerpt_separator: "<!--more-->"
+
+# Number of posts shown on the homepage
+post_limit: 10
+
+# ----------------------------------------------------------
+# Build settings (don't need to touch these)
+# ----------------------------------------------------------
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - .jekyll-cache
