@@ -348,15 +348,6 @@ article {
     h1 { margin: 0; a { text-decoration: none; &:hover { text-decoration: underline; } } }
     p { font-size: .9em; color: $text-muted; margin: 0; }
     p.meta { text-transform: uppercase; position: absolute; top: 0; }
-    p.meta .reading-time:before {
-      content: "\2022 ";
-      padding: 0 .4em 0 .2em;
-    }
-  }
-
-  // the meta line is longer now; give it room to wrap on phones
-  @media only screen and (max-width: 549px) {
-    header { padding-top: 3.4em; }
   }
 
   h2 {
@@ -509,6 +500,28 @@ div.pagination {
       .year { display: none; }
     }
   }
+}
+
+// ==========================================================================
+// Posts feed (short-form bits)
+// ==========================================================================
+#bits {
+  .bit {
+    padding: 1em 0 1.2em;
+    background: $dotted-line bottom left repeat-x;
+    &:last-child { background: none; }
+  }
+
+  time {
+    display: block;
+    font-family: $sans;
+    font-size: .8em;
+    text-transform: uppercase;
+    color: $text-muted;
+    margin-bottom: .2em;
+  }
+
+  .bit-text p { margin-bottom: 0; }
 }
 
 // ==========================================================================

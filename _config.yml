@@ -22,6 +22,14 @@ permalink: /blog/:year/:month/:day/:title/
 # Put <!--more--> in a post to cut the homepage teaser there.
 excerpt_separator: "<!--more-->"
 
+# ----------------------------------------------------------
+# Short-form posts (the "Posts" tab)
+# Drop a file in _bits/ — tiny front matter + your text.
+# ----------------------------------------------------------
+collections:
+  bits:
+    output: false
+
 # Number of posts shown on the homepage
 post_limit: 10
 

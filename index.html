@@ -7,8 +7,7 @@ layout: default
   <article>
     <header>
       <h1 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-      <p class="meta"><time datetime="{{ post.date | date_to_xmlschema }}" pubdate data-updated="true">{{ post.date | date: "%b %-d, %Y" }}</time>
-        <span class="reading-time">estimated reading time : worth your time LOL</span></p>
+      <p class="meta"><time datetime="{{ post.date | date_to_xmlschema }}" pubdate data-updated="true">{{ post.date | date: "%b %-d, %Y" }}</time></p>
     </header>
     <div class="entry-content">{{ post.excerpt }}
       {% if post.content contains "<!--more-->" %}
