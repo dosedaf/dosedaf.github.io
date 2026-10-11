@@ -207,6 +207,7 @@ body > nav {
     font-size: 1.1em;
     padding: .1em 0;
     line-height: 1.5em;
+    &:visited { color: $nav-link; }
     &:hover { color: $nav-link-hover; }
   }
 
@@ -562,7 +563,7 @@ body > footer {
   border-radius: 0 0 0.4em 0.4em;
   z-index: 1;
 
-  a { color: $nav-link; &:hover { color: #484848; } }
+  a { color: $nav-link; &:visited { color: $nav-link; } &:hover { color: #484848; } }
   p { margin-bottom: 0; }
 }
 

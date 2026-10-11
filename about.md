@@ -3,6 +3,9 @@ layout: page
 title: About
 ---
 
-Hi, I'm **Your Name**. This is my blog.
+hey, im Ayodya Enhanayoan, i go by dosedaf / skipindexes / yoda. kind of interested in data engineering :)
 
-<!-- Edit this page at `about.md` in the site folder. Plain Markdown. -->
+reach me on [enhanayooan@gmail.com](mailto:enhanayooan@gmail.com).
+
+- [github](https://github.com/dosedaf)
+- [linkedin](https://linkedin.com/in/enhanayoan)
