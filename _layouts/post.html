@@ -3,7 +3,7 @@ layout: default
 ---
 <article class="hentry" role="article">
   <header>
-    <h1 class="entry-title">{{ page.title }}</h1>
+    <h1 class="entry-title">{{ page.title }}{% if page.wip %} <span class="wip">wip</span>{% endif %}</h1>
     <p class="meta">
       <time datetime="{{ page.date | date_to_xmlschema }}" pubdate data-updated="true">{{ page.date | date: "%b %-d, %Y" }}</time>
     </p>

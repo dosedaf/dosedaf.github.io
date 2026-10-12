@@ -395,6 +395,23 @@ article > footer {
   }
 }
 
+// WIP badge next to post titles
+.wip {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: .4em;
+  padding: .15em .5em;
+  font-family: $sans;
+  font-size: .35em;
+  font-weight: normal;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #b58900;
+  background: $code-bg;
+  border: 1px solid $code-border;
+  border-radius: .4em;
+}
+
 // ==========================================================================
 // Blog index (homepage)
 // ==========================================================================

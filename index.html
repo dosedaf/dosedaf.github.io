@@ -6,7 +6,7 @@ layout: default
   {% for post in site.posts limit: site.post_limit %}
   <article>
     <header>
-      <h1 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+      <h1 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a>{% if post.wip %} <span class="wip">wip</span>{% endif %}</h1>
       <p class="meta"><time datetime="{{ post.date | date_to_xmlschema }}" pubdate data-updated="true">{{ post.date | date: "%b %-d, %Y" }}</time></p>
     </header>
     <div class="entry-content">{{ post.excerpt }}
