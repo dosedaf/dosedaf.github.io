@@ -395,21 +395,16 @@ article > footer {
   }
 }
 
-// WIP badge next to post titles
+// WIP marker next to post titles
 .wip {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: .4em;
-  padding: .15em .5em;
+  margin-left: .3em;
   font-family: $sans;
-  font-size: .35em;
+  font-size: .3em;
   font-weight: normal;
-  letter-spacing: .08em;
+  vertical-align: super;
+  letter-spacing: .12em;
   text-transform: uppercase;
   color: #b58900;
-  background: $code-bg;
-  border: 1px solid $code-border;
-  border-radius: .4em;
 }
 
 // ==========================================================================
